@@ -1,21 +1,15 @@
-package com.papyrus.docservice.entity;
+package com.papyrus.docservice.requestDTO;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@Entity
-@NoArgsConstructor
 @AllArgsConstructor
-@Builder
-public class BusinessLetter {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+@NoArgsConstructor
+public class documentRequestDTO {
 
     private String templateType;
 
@@ -35,13 +29,13 @@ public class BusinessLetter {
 
     private String salutation;
 
-    @Column (length = 2000)
+
     private String body1;
 
-    @Column (length = 2000)
+
     private String body2;
 
-    @Column (length = 2000)
+
     private String body3;
 
     private String yourName;
@@ -51,4 +45,29 @@ public class BusinessLetter {
     private String email;
 
     private String phone;
+
+
+    private String employeeName;
+
+    private String designation;
+
+    private String payPeriod;
+
+    private String workedDays;
+
+    private String basic;
+
+    private String incetivePay;
+
+    private String houseRentAllowance;
+
+    private String mealAllowance;
+
+    private String providentFund;
+
+    private String professionalTax;
+
+    private String loan;
+
+
 }

@@ -1,5 +1,6 @@
 package com.papyrus.docservice.entity;
 
+
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -11,7 +12,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class BusinessLetter {
+public class Payslip {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,26 +26,27 @@ public class BusinessLetter {
 
     private String todayDate;
 
-    private String addresseeName;
+    private String employeeName;
 
-    private String addresseeTitle;
+    private String designation;
 
-    private String addresseeCompany;
+    private String payPeriod;
 
-    private String companyAddress;
+    private String workedDays;
 
-    private String salutation;
+    private String basic;
 
-    @Column (length = 2000)
-    private String body1;
+    private String incetivePay;
 
-    @Column (length = 2000)
-    private String body2;
+    private String houseRentAllowance;
 
-    @Column (length = 2000)
-    private String body3;
+    private String mealAllowance;
 
-    private String yourName;
+    private String providentFund;
+
+    private String professionalTax;
+
+    private String loan;
 
     private String companyWebsite;
 
