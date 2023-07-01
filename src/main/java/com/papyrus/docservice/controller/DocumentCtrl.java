@@ -13,6 +13,7 @@ import static org.springframework.http.ResponseEntity.ok;
 
 @RestController
 @RequestMapping("/docservice")
+@CrossOrigin(origins = "*")
 public class DocumentCtrl {
 
     final IDocumentService _iDocumentService;
@@ -21,13 +22,7 @@ public class DocumentCtrl {
         _iDocumentService = iDocumentService;
     }
 
-    //    @PostMapping("/add-document")
-//    public ResponseEntity<?> addDocument(@RequestBody documentRequestDTO requestDTO){
-//        if(requestDTO.getTemplateType() == "business-letter"){
-//            return ResponseEntity.ok(_iDocumentService.addLetter(requestDTO));
-//        }
-//        return ResponseEntity.ok(_iDocumentService.addPayslip(requestDTO));
-//    }
+
     @PostMapping("/add-business-letter")
     public ResponseEntity<?>  addLetter(@RequestBody BusinessLetter businessLetter){
         return ResponseEntity.ok(_iDocumentService.addLetter(businessLetter));
@@ -77,5 +72,11 @@ public class DocumentCtrl {
 
     }
 
-
+//    @PostMapping("/add-document")
+//    public ResponseEntity<?> addDocument(@RequestBody documentRequestDTO requestDTO){
+//        if(requestDTO.getTemplateType() == "business-letter"){
+//            return ResponseEntity.ok(_iDocumentService.addLetter(requestDTO));
+//        }
+//        return ResponseEntity.ok(_iDocumentService.addPayslip(requestDTO));
+//    }
 

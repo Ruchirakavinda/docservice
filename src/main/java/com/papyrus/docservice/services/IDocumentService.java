@@ -7,8 +7,7 @@ import com.papyrus.docservice.requestDTO.documentRequestDTO;
 import java.util.List;
 
 public interface IDocumentService {
-//    public BusinessLetter addLetter(documentRequestDTO requestDTO);
-//    public Payslip addPayslip (documentRequestDTO requestDTO);
+
 
     public BusinessLetter addLetter(BusinessLetter businessLetter);
     public Payslip addPayslip(Payslip payslip);
@@ -24,4 +23,7 @@ public interface IDocumentService {
 
     public void deleteLetterById(Integer id);
     public void deletePayslipById(Integer id);
+
+    //    public BusinessLetter addLetter(documentRequestDTO requestDTO);
+//    public Payslip addPayslip (documentRequestDTO requestDTO);
 }

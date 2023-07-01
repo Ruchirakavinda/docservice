@@ -21,53 +21,6 @@ public class DocumentServiceImpl implements IDocumentService {
         this.iPayslipRepo = iPayslipRepo;
     }
 
-//    @Override
-//    public BusinessLetter addLetter(documentRequestDTO requestDTO) {
-//
-//        var businessLetter = BusinessLetter.builder()
-//                .templateType(requestDTO.getTemplateType())
-//                .companyName(requestDTO.getCompanyName())
-//                .yourAddress(requestDTO.getYourAddress())
-//                .todayDate(requestDTO.getTodayDate())
-//                .addresseeName(requestDTO.getAddresseeName())
-//                .addresseeTitle(requestDTO.getAddresseeTitle())
-//                .addresseeCompany(requestDTO.getAddresseeCompany())
-//                .companyAddress(requestDTO.getCompanyAddress())
-//                .salutation(requestDTO.getSalutation())
-//                .body1(requestDTO.getBody1())
-//                .body2(requestDTO.getBody2())
-//                .body3(requestDTO.getBody3())
-//                .yourName(requestDTO.getYourName())
-//                .companyWebsite(requestDTO.getCompanyWebsite())
-//                .email(requestDTO.getEmail())
-//                .phone(requestDTO.getPhone()).build();
-//        return iBusinessLetterRepo.save(businessLetter);
-//    }
-//
-//    @Override
-//    public Payslip addPayslip(documentRequestDTO requestDTO) {
-//        var payslip = Payslip.builder()
-//                .templateType(requestDTO.getTemplateType())
-//                .companyName(requestDTO.getCompanyName())
-//                .yourAddress(requestDTO.getYourAddress())
-//                .todayDate(requestDTO.getTodayDate())
-//                .employeeName(requestDTO.getEmployeeName())
-//                .designation(requestDTO.getDesignation())
-//                .payPeriod(requestDTO.getPayPeriod())
-//                .workedDays(requestDTO.getWorkedDays())
-//                .basic(requestDTO.getBasic())
-//                .incetivePay(requestDTO.getIncetivePay())
-//                .houseRentAllowance(requestDTO.getHouseRentAllowance())
-//                .mealAllowance(requestDTO.getMealAllowance())
-//                .providentFund(requestDTO.getProvidentFund())
-//                .professionalTax(requestDTO.getProfessionalTax())
-//                .loan(requestDTO.getLoan())
-//                .companyWebsite(requestDTO.getCompanyWebsite())
-//                .email(requestDTO.getEmail())
-//                .phone(requestDTO.getPhone()).build();
-//        return iPayslipRepo.save(payslip);
-//    }
-
     @Override
     public BusinessLetter addLetter(BusinessLetter businessLetter) {
         return iBusinessLetterRepo.save(businessLetter);
@@ -157,4 +110,53 @@ public class DocumentServiceImpl implements IDocumentService {
     public void deletePayslipById(Integer id) {
         iPayslipRepo.deleteById(id);
     }
+
+
+//    @Override
+//    public BusinessLetter addLetter(documentRequestDTO requestDTO) {
+//
+//        var businessLetter = BusinessLetter.builder()
+//                .templateType(requestDTO.getTemplateType())
+//                .companyName(requestDTO.getCompanyName())
+//                .yourAddress(requestDTO.getYourAddress())
+//                .todayDate(requestDTO.getTodayDate())
+//                .addresseeName(requestDTO.getAddresseeName())
+//                .addresseeTitle(requestDTO.getAddresseeTitle())
+//                .addresseeCompany(requestDTO.getAddresseeCompany())
+//                .companyAddress(requestDTO.getCompanyAddress())
+//                .salutation(requestDTO.getSalutation())
+//                .body1(requestDTO.getBody1())
+//                .body2(requestDTO.getBody2())
+//                .body3(requestDTO.getBody3())
+//                .yourName(requestDTO.getYourName())
+//                .companyWebsite(requestDTO.getCompanyWebsite())
+//                .email(requestDTO.getEmail())
+//                .phone(requestDTO.getPhone()).build();
+//        return iBusinessLetterRepo.save(businessLetter);
+//    }
+//
+//    @Override
+//    public Payslip addPayslip(documentRequestDTO requestDTO) {
+//        var payslip = Payslip.builder()
+//                .templateType(requestDTO.getTemplateType())
+//                .companyName(requestDTO.getCompanyName())
+//                .yourAddress(requestDTO.getYourAddress())
+//                .todayDate(requestDTO.getTodayDate())
+//                .employeeName(requestDTO.getEmployeeName())
+//                .designation(requestDTO.getDesignation())
+//                .payPeriod(requestDTO.getPayPeriod())
+//                .workedDays(requestDTO.getWorkedDays())
+//                .basic(requestDTO.getBasic())
+//                .incetivePay(requestDTO.getIncetivePay())
+//                .houseRentAllowance(requestDTO.getHouseRentAllowance())
+//                .mealAllowance(requestDTO.getMealAllowance())
+//                .providentFund(requestDTO.getProvidentFund())
+//                .professionalTax(requestDTO.getProfessionalTax())
+//                .loan(requestDTO.getLoan())
+//                .companyWebsite(requestDTO.getCompanyWebsite())
+//                .email(requestDTO.getEmail())
+//                .phone(requestDTO.getPhone()).build();
+//        return iPayslipRepo.save(payslip);
+//    }
+
 }
